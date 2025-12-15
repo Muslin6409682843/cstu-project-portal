@@ -11,7 +11,7 @@
 
 **ผู้จัดทำโครงงาน:** (โปรดเขียนข้อมูลผู้จัดทำโครงงานตามฟอร์แมตดังแสดงในตัวอย่างด้านล่าง)
 1. นางสาวมัสลิน พัสตร์วาณิช  6409682843  muslin.pat@dome.tu.ac.th
-2. <ถ้ามี>
+2. นายสันติภาพ พิพัฒน์รัตนชัย 6509612047  santipap.pip@dome.tu.ac.th
    
 Manual / Instructions for your projects starts here !
 # Topic 1
