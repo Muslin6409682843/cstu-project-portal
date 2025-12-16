@@ -23,18 +23,8 @@ Manual / Instructions for your projects starts here !
 
 │  │  ├─ main/
 
-│  │  │  ├─ java/
-
-│  │  │  │  └─ th/
-
-│  │  │  │     └─ ac/
-
-│  │  │  │        └─ tu/
-
-│  │  │  │           └─ cs/
-
-│  │  │  │              └─ projectportal/
-│  │  │  │                 ├─ config/
+│  │  │  ├─ java/th/ac/tu/cs/projectportal/
+│  │  │  │  |  ├─ config/
 │  │  │  │                 │  ├─ AdminSeeder.java
 │  │  │  │                 │  ├─ CorsConfig.java
 │  │  │  │                 │  ├─ ProjectConfig.java
