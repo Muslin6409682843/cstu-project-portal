@@ -14,6 +14,85 @@
 2. นายสันติภาพ พิพัฒน์รัตนชัย 6509612047  santipap.pip@dome.tu.ac.th
    
 Manual / Instructions for your projects starts here !
-# Topic 1
+# Directory tree
+├─ backend/
+│  ├─ .mvn/                          # Maven wrapper
+│  ├─ src/
+│  │  ├─ main/
+│  │  │  ├─ java/
+│  │  │  │  └─ th/
+│  │  │  │     └─ ac/
+│  │  │  │        └─ tu/
+│  │  │  │           └─ cs/
+│  │  │  │              └─ projectportal/
+│  │  │  │                 ├─ config/
+│  │  │  │                 │  ├─ AdminSeeder.java
+│  │  │  │                 │  ├─ CorsConfig.java
+│  │  │  │                 │  ├─ ProjectConfig.java
+│  │  │  │                 │  └─ SecurityConfig.java
+│  │  │  │                 │
+│  │  │  │                 ├─ controller/
+│  │  │  │                 │  ├─ AdminController.java
+│  │  │  │                 │  ├─ BookmarkController.java
+│  │  │  │                 │  ├─ DownloadHistoryController.java
+│  │  │  │                 │  ├─ HistoryController.java
+│  │  │  │                 │  ├─ ProjectController.java
+│  │  │  │                 │  ├─ PublicDownloadHistoryController.java
+│  │  │  │                 │  ├─ PublicProjectController.java
+│  │  │  │                 │  └─ UserController.java
+│  │  │  │                 │
+│  │  │  │                 ├─ dto/
+│  │  │  │                 │  ├─ ProjectDTO.java
+│  │  │  │                 │  └─ UserResponseDTO.java
+│  │  │  │                 │
+│  │  │  │                 ├─ entity/
+│  │  │  │                 │  ├─ Bookmark.java
+│  │  │  │                 │  ├─ BookmarkId.java
+│  │  │  │                 │  ├─ DownloadHistory.java
+│  │  │  │                 │  ├─ DownloadHistoryId.java
+│  │  │  │                 │  ├─ Gender.java
+│  │  │  │                 │  ├─ History.java
+│  │  │  │                 │  ├─ HistoryId.java
+│  │  │  │                 │  ├─ Project.java
+│  │  │  │                 │  ├─ Role.java
+│  │  │  │                 │  └─ User.java
+│  │  │  │                 │
+│  │  │  │                 ├─ repository/
+│  │  │  │                 │  ├─ BookmarkRepository.java
+│  │  │  │                 │  ├─ DownloadHistoryRepository.java
+│  │  │  │                 │  ├─ HistoryRepository.java
+│  │  │  │                 │  ├─ ProjectRepository.java
+│  │  │  │                 │  └─ UserRepository.java
+│  │  │  │                 │
+│  │  │  │                 ├─ service/
+│  │  │  │                 │  ├─ DownloadHistoryService.java
+│  │  │  │                 │  ├─ ProjectService.java
+│  │  │  │                 │  ├─ UserCleanupService.java
+│  │  │  │                 │  └─ UserService.java
+│  │  │  │                 │
+│  │  │  │                 └─ BackendApplication.java
+│  │  │  │
+│  │  │  └─ resources/
+│  │  │     ├─ sql/
+│  │  │     │  └─ schema.sql
+│  │  │     ├─ application.properties
+│  │  │     └─ application-dev.properties
+│  │  │
+│  │  └─ test/
+│  │     └─ java/
+│  │        └─ th/
+│  │           └─ ac/
+│  │              └─ tu/
+│  │                 └─ cs/
+│  │                    └─ projectportal/
+│  │                       └─ BackendApplicationTests.java
+│  │
+│  └─ target/                       # Build output
+│
+├─ .gitattributes
+├─ mvnw
+├─ mvnw.cmd
+└─ pom.xml
+
 # Topic 2 
 # Topic 3
