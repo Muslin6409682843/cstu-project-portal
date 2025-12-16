@@ -21,11 +21,12 @@ Manual / Instructions for your projects starts here !
 
 │  ├─ src/
 
-│  │  ├─ main/
+|  │  │  ├─ main/
 
-│  │  │  ├─ java/th/ac/tu/cs/projectportal/
-│  │  │  │  |  ├─ config/
-│  │  │  │                 │  ├─ AdminSeeder.java
+|  │  │  │  ├─ java/th/ac/tu/cs/projectportal/
+
+|  │  │  │  │  |  ├─ config/
+│  │  │  │  |  |  |  │  ├─ AdminSeeder.java
 │  │  │  │                 │  ├─ CorsConfig.java
 │  │  │  │                 │  ├─ ProjectConfig.java
 │  │  │  │                 │  └─ SecurityConfig.java
