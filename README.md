@@ -16,61 +16,56 @@
 Manual / Instructions for your projects starts here !
 # Directory tree
 ├─ backend/
-
 │  ├─ .mvn/                          # Maven wrapper
-
 │  ├─ src/
-
-|  │  │  ├─ main/
-
-|  │  │  │  ├─ java/th/ac/tu/cs/projectportal/
-
-|  │  │  │  │  |  ├─ config/
-│  │  │  │  |  |  |  │  ├─ AdminSeeder.java
-│  │  │  │                 │  ├─ CorsConfig.java
-│  │  │  │                 │  ├─ ProjectConfig.java
-│  │  │  │                 │  └─ SecurityConfig.java
-│  │  │  │                 │
-│  │  │  │                 ├─ controller/
-│  │  │  │                 │  ├─ AdminController.java
-│  │  │  │                 │  ├─ BookmarkController.java
-│  │  │  │                 │  ├─ DownloadHistoryController.java
-│  │  │  │                 │  ├─ HistoryController.java
-│  │  │  │                 │  ├─ ProjectController.java
-│  │  │  │                 │  ├─ PublicDownloadHistoryController.java
-│  │  │  │                 │  ├─ PublicProjectController.java
-│  │  │  │                 │  └─ UserController.java
-│  │  │  │                 │
-│  │  │  │                 ├─ dto/
-│  │  │  │                 │  ├─ ProjectDTO.java
-│  │  │  │                 │  └─ UserResponseDTO.java
-│  │  │  │                 │
-│  │  │  │                 ├─ entity/
-│  │  │  │                 │  ├─ Bookmark.java
-│  │  │  │                 │  ├─ BookmarkId.java
-│  │  │  │                 │  ├─ DownloadHistory.java
-│  │  │  │                 │  ├─ DownloadHistoryId.java
-│  │  │  │                 │  ├─ Gender.java
-│  │  │  │                 │  ├─ History.java
-│  │  │  │                 │  ├─ HistoryId.java
-│  │  │  │                 │  ├─ Project.java
-│  │  │  │                 │  ├─ Role.java
-│  │  │  │                 │  └─ User.java
-│  │  │  │                 │
-│  │  │  │                 ├─ repository/
-│  │  │  │                 │  ├─ BookmarkRepository.java
-│  │  │  │                 │  ├─ DownloadHistoryRepository.java
-│  │  │  │                 │  ├─ HistoryRepository.java
-│  │  │  │                 │  ├─ ProjectRepository.java
-│  │  │  │                 │  └─ UserRepository.java
-│  │  │  │                 │
-│  │  │  │                 ├─ service/
-│  │  │  │                 │  ├─ DownloadHistoryService.java
-│  │  │  │                 │  ├─ ProjectService.java
-│  │  │  │                 │  ├─ UserCleanupService.java
-│  │  │  │                 │  └─ UserService.java
-│  │  │  │                 │
-│  │  │  │                 └─ BackendApplication.java
+|  │  ├─ main/
+|  │  │  ├─ java/th/ac/tu/cs/projectportal/
+|  │  │  │   ├─ config/
+│  │  │  │   │  ├─ AdminSeeder.java
+│  │  │  │   │  ├─ CorsConfig.java
+│  │  │  │   │  ├─ ProjectConfig.java
+│  │  │  │   │  └─ SecurityConfig.java
+│  │  │  │   │
+│  │  │  │   ├─ controller/
+│  │  │  │   │  ├─ AdminController.java
+│  │  │  │   │  ├─ BookmarkController.java
+│  │  │  │   │  ├─ DownloadHistoryController.java
+│  │  │  │   │  ├─ HistoryController.java
+│  │  │  │   │  ├─ ProjectController.java
+│  │  │  │   │  ├─ PublicDownloadHistoryController.java
+│  │  │  │   │  ├─ PublicProjectController.java
+│  │  │  │   │  └─ UserController.java
+│  │  │  │   │
+│  │  │  │   ├─ dto/
+│  │  │  │   │  ├─ ProjectDTO.java
+│  │  │  │   │  └─ UserResponseDTO.java
+│  │  │  │   │
+│  │  │  │   ├─ entity/
+│  │  │  │   │  ├─ Bookmark.java
+│  │  │  │   │  ├─ BookmarkId.java
+│  │  │  │   │  ├─ DownloadHistory.java
+│  │  │  │   │  ├─ DownloadHistoryId.java
+│  │  │  │   │  ├─ Gender.java
+│  │  │  │   │  ├─ History.java
+│  │  │  │   │  ├─ HistoryId.java
+│  │  │  │   │  ├─ Project.java
+│  │  │  │   │  ├─ Role.java
+│  │  │  │   │  └─ User.java
+│  │  │  │   │
+│  │  │  │   ├─ repository/
+│  │  │  │   │  ├─ BookmarkRepository.java
+│  │  │  │   │  ├─ DownloadHistoryRepository.java
+│  │  │  │   │  ├─ HistoryRepository.java
+│  │  │  │   │  ├─ ProjectRepository.java
+│  │  │  │   │  └─ UserRepository.java
+│  │  │  │   │
+│  │  │  │   ├─ service/
+│  │  │  │   │  ├─ DownloadHistoryService.java
+│  │  │  │   │  ├─ ProjectService.java
+│  │  │  │   │  ├─ UserCleanupService.java
+│  │  │  │   │  └─ UserService.java
+│  │  │  │   │
+│  │  │  │   └─ BackendApplication.java
 │  │  │  │
 │  │  │  └─ resources/
 │  │  │     ├─ sql/
@@ -79,13 +74,8 @@ Manual / Instructions for your projects starts here !
 │  │  │     └─ application-dev.properties
 │  │  │
 │  │  └─ test/
-│  │     └─ java/
-│  │        └─ th/
-│  │           └─ ac/
-│  │              └─ tu/
-│  │                 └─ cs/
-│  │                    └─ projectportal/
-│  │                       └─ BackendApplicationTests.java
+│  │     └─ java/th/ac/tu/cs/projectportal/
+│  │  │  │  └─ BackendApplicationTests.java
 │  │
 │  └─ target/                       # Build output
 │
