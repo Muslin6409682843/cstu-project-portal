@@ -16,14 +16,23 @@
 Manual / Instructions for your projects starts here !
 # Directory tree
 ├─ backend/
+
 │  ├─ .mvn/                          # Maven wrapper
+
 │  ├─ src/
+
 │  │  ├─ main/
+
 │  │  │  ├─ java/
+
 │  │  │  │  └─ th/
+
 │  │  │  │     └─ ac/
+
 │  │  │  │        └─ tu/
+
 │  │  │  │           └─ cs/
+
 │  │  │  │              └─ projectportal/
 │  │  │  │                 ├─ config/
 │  │  │  │                 │  ├─ AdminSeeder.java
