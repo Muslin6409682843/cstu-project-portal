@@ -1,6 +1,19 @@
--- Table `user`
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `user` (
+-- Schema finalproject
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `finalproject` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci ;
+USE `finalproject` ;
+
+-- -----------------------------------------------------
+-- Table `finalproject`.`user`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `finalproject`.`user` (
   `UserID` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `user_code` VARCHAR(255) NULL DEFAULT NULL,
   `Username` VARCHAR(255) NOT NULL,
@@ -30,9 +43,9 @@ COLLATE = utf8mb4_0900_ai_ci;
 
 
 -- -----------------------------------------------------
--- Table `project`
+-- Table `finalproject`.`project`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `project` (
+CREATE TABLE IF NOT EXISTS `finalproject`.`project` (
   `ProjectID` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
   `title_th` VARCHAR(255) NULL DEFAULT NULL,
   `title_en` VARCHAR(255) NULL DEFAULT NULL,
@@ -59,9 +72,9 @@ COLLATE = utf8mb4_0900_ai_ci;
 
 
 -- -----------------------------------------------------
--- Table `bookmark`
+-- Table `finalproject`.`bookmark`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `bookmark` (
+CREATE TABLE IF NOT EXISTS `finalproject`.`bookmark` (
   `UserID` INT UNSIGNED NOT NULL,
   `ProjectID` BIGINT UNSIGNED NOT NULL,
   `bookmark_date` DATETIME(6) NULL DEFAULT NULL,
@@ -69,11 +82,11 @@ CREATE TABLE IF NOT EXISTS `bookmark` (
   INDEX `bookmark_ibfk_2` (`ProjectID` ASC) VISIBLE,
   CONSTRAINT `bookmark_ibfk_1`
     FOREIGN KEY (`UserID`)
-    REFERENCES `user` (`UserID`)
+    REFERENCES `finalproject`.`user` (`UserID`)
     ON DELETE CASCADE,
   CONSTRAINT `bookmark_ibfk_2`
     FOREIGN KEY (`ProjectID`)
-    REFERENCES `project` (`ProjectID`)
+    REFERENCES `finalproject`.`project` (`ProjectID`)
     ON DELETE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
@@ -81,22 +94,21 @@ COLLATE = utf8mb4_0900_ai_ci;
 
 
 -- -----------------------------------------------------
--- Table `downloadhistory`
+-- Table `finalproject`.`downloadhistory`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `downloadhistory` (
+CREATE TABLE IF NOT EXISTS `finalproject`.`downloadhistory` (
   `UserID` INT UNSIGNED NOT NULL,
   `ProjectID` BIGINT UNSIGNED NOT NULL,
-  `DownloadDateTime` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `download_date_time` DATETIME(6) NOT NULL,
-  PRIMARY KEY (`UserID`, `ProjectID`, `DownloadDateTime`),
+  PRIMARY KEY (`UserID`, `ProjectID`),
   INDEX `ProjectID` (`ProjectID` ASC) VISIBLE,
   CONSTRAINT `downloadhistory_ibfk_1`
     FOREIGN KEY (`UserID`)
-    REFERENCES `user` (`UserID`)
+    REFERENCES `finalproject`.`user` (`UserID`)
     ON DELETE CASCADE,
   CONSTRAINT `downloadhistory_ibfk_2`
     FOREIGN KEY (`ProjectID`)
-    REFERENCES `project` (`ProjectID`)
+    REFERENCES `finalproject`.`project` (`ProjectID`)
     ON DELETE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
@@ -104,9 +116,9 @@ COLLATE = utf8mb4_0900_ai_ci;
 
 
 -- -----------------------------------------------------
--- Table `viewhistory`
+-- Table `finalproject`.`viewhistory`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `viewhistory` (
+CREATE TABLE IF NOT EXISTS `finalproject`.`viewhistory` (
   `UserID` INT UNSIGNED NOT NULL,
   `ProjectID` BIGINT UNSIGNED NOT NULL,
   `view_date_time` DATETIME(6) NULL DEFAULT NULL,
@@ -114,13 +126,17 @@ CREATE TABLE IF NOT EXISTS `viewhistory` (
   INDEX `ProjectID` (`ProjectID` ASC) VISIBLE,
   CONSTRAINT `viewhistory_ibfk_1`
     FOREIGN KEY (`UserID`)
-    REFERENCES `user` (`UserID`)
+    REFERENCES `finalproject`.`user` (`UserID`)
     ON DELETE CASCADE,
   CONSTRAINT `viewhistory_ibfk_2`
     FOREIGN KEY (`ProjectID`)
-    REFERENCES `project` (`ProjectID`)
+    REFERENCES `finalproject`.`project` (`ProjectID`)
     ON DELETE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
