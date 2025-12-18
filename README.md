@@ -203,7 +203,7 @@ git --version
 node -v
 npm -v
 ```
-
+---
 #### 3. Backend
 
 * Java **JDK 25**
@@ -214,7 +214,7 @@ npm -v
 java -version
 javac -version
 ```
-
+---
 #### 4. Database
 
 * **MySQL Server 8.x**
@@ -272,8 +272,6 @@ http://localhost:5173
 ```
 
 ---
-
-
 
 ## ⚙️ Backend Setup (Spring Boot)
 
