@@ -21,7 +21,7 @@
 
 ---
 
-# ✨ System Features
+# 📌 System Features
 
 - ค้นหาและแสดงโครงงานพิเศษของนักศึกษาสาขา Computer Science
 - ค้นหาด้วยชื่อโครงงาน คีย์เวิร์ด ชื่ออาจารย์ ชื่อนักศึกษา และปีการศึกษา
@@ -34,6 +34,9 @@
 
 ---
 # Directory tree
+
+โครงสร้างไดเรกทอรีของโปรเจกต์ แบ่งออกเป็นส่วน Frontend และ Backend ดังนี้
+
 ```text
 frontend/
 ├─ public/
@@ -241,8 +244,8 @@ javac -version
 
 ---
 
-#### 5. Visual Studio Code**
-**Extension ที่ควรมี
+#### 5. Visual Studio Code
+**Extension ที่ควรมี**
 * **Spring boot extension pack**
 * **Extension Pack for Java**
 
@@ -254,10 +257,10 @@ javac -version
 ### Clone Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/ComSciThammasatU/2568-1-cs403-final-submission-67-2_01_tpb-r2.git
 ```
 ```bash
-cd <project-root>
+cd 2568-1-cs403-final-submission-67-2_01_tpb-r2
 ```
 
 ---
@@ -302,19 +305,19 @@ cd backend
 
 ### ตั้งค่าใน Backend
 
-สร้างไฟล์ `backend/src/main/resources/application-dev.properties`
+ตรวจสอบและแก้ไขค่าการเชื่อมต่อฐานข้อมูลในไฟล์  
+`backend/src/main/resources/application-dev.properties`
 
-ตัวอย่าง:
+ตัวอย่างการตั้งค่า:
 
 ```properties
-
 # Database configuration
 db.host=localhost
 db.port=3306
 db.name=finalproject
 
-spring.datasource.username=root
-spring.datasource.password=root
+spring.datasource.username=<your-db-username>
+spring.datasource.password=<your-db-password>
 
 # Backend server port
 server.port=8081
