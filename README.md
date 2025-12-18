@@ -13,7 +13,7 @@
 1. นางสาวมัสลิน พัสตร์วาณิช  6409682843  muslin.pat@dome.tu.ac.th
 2. นายสันติภาพ พิพัฒน์รัตนชัย 6509612047  santipap.pip@dome.tu.ac.th
    
-Manual / Instructions for your projects starts here !
+
 # Directory tree
 ```text
 frontend/
@@ -186,10 +186,11 @@ frontend/
 #### 1. Git
 
 ใช้สำหรับ clone repository
----
-bash
+
+```bash
 git --version
 ```
+---
 
 #### 2. Frontend
 
@@ -223,8 +224,8 @@ javac -version
 
 #### 5. Visual Studio Code**
 **Extension ที่ควรมี
-* **Spring boot extension pack
-* **Extension Pack for Java
+* **Spring boot extension pack**
+* **Extension Pack for Java**
 
 
 ---
@@ -235,6 +236,8 @@ javac -version
 
 ```bash
 git clone <repository-url>
+```
+```bash
 cd <project-root>
 ```
 
@@ -254,7 +257,7 @@ cd frontend
 npm install
 ```
 
-> คำสั่งนี้จะติดตั้ง React, Vite, TypeScript, Tailwind, MUI, Axios และ library อื่น ๆ ให้อัตโนมัติ
+> คำสั่งนี้จะติดตั้ง React, Vite, TypeScript, Tailwind, MUI, Axios และ library อื่น ๆ 
 
 ### ▶️ รัน Frontend (Development Mode)
 
@@ -291,6 +294,25 @@ cd backend
 ```bash
 ./mvnw spring-boot:run
 ```
+#### รัน Spring Boot Application
+
+สามารถรันได้ 2 วิธี:
+
+##### วิธีที่ 1: ผ่าน Spring Boot Dashboard
+
+เปิดแท็บ Spring Boot Dashboard
+
+เลือกชื่อแอปพลิเคชัน
+
+กด ▶️ Run
+
+##### วิธีที่ 2: ผ่านไฟล์หลัก
+
+เปิดไฟล์ 
+
+backend/src/main/java/th/ac/tu/cs/projectportal/BackendApplication.java
+
+กด ▶️ Run ที่อยู่เหนือเมธอด main()
 
 > โปรเจกต์นี้ใช้ **Maven Wrapper** จึงไม่จำเป็นต้องติดตั้ง Maven เอง
 
@@ -330,8 +352,5 @@ spring.datasource.password=root
 
 # Backend server port
 server.port=8081
-
+```
 ---
-
-# Topic 2 
-# Topic 3
