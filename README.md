@@ -15,6 +15,100 @@
    
 Manual / Instructions for your projects starts here !
 # Directory tree
+frontend/
+├─ public/
+│
+├─ src/
+│  ├─ api/
+│  │  └─ axiosConfig.ts
+│  │
+│  ├─ assets/
+│  │  ├─ background.css
+│  │  ├─ logo.png
+│  │  └─ react.svg
+│  │
+│  ├─ components/
+│  │  ├─ admin/
+│  │  │  ├─ ConfirmDialog.tsx
+│  │  │  └─ RoleFilter.tsx
+│  │  │
+│  │  ├─ project/
+│  │  │  ├─ ProjectAbstract.tsx
+│  │  │  ├─ ProjectActionButtons.tsx
+│  │  │  ├─ ProjectHeader.tsx
+│  │  │  ├─ ProjectInfo.tsx
+│  │  │  └─ ProjectSection.tsx
+│  │  │
+│  │  ├─ AccountSideBar.tsx
+│  │  ├─ EditProjectForm.tsx
+│  │  ├─ FilterDropMenu.tsx
+│  │  ├─ FilterMultiChoice.tsx
+│  │  ├─ FilterSingleSelect.tsx
+│  │  ├─ FooterKeywords.tsx
+│  │  ├─ HistorySorting.tsx
+│  │  ├─ MyProjectCard.tsx
+│  │  ├─ NavBar.tsx
+│  │  ├─ Pagination.tsx
+│  │  ├─ ProjectCard.tsx
+│  │  ├─ ProjectForm.tsx
+│  │  ├─ SideBar.tsx
+│  │  ├─ Sorting.tsx
+│  │  └─ TextSearch.tsx
+│  │
+│  ├─ context/
+│  │  └─ AuthContext.tsx
+│  │
+│  ├─ dto/
+│  │  └─ ProjectDTO.ts
+│  │
+│  ├─ pages/
+│  │  ├─ admin/
+│  │  │  ├─ AdminPanel.tsx
+│  │  │  ├─ ApprovedUsers.tsx
+│  │  │  ├─ DownloadHistoryList.tsx
+│  │  │  ├─ PendingUsers.tsx
+│  │  │  └─ ProjectList.tsx
+│  │  │
+│  │  ├─ AboutCSTU.tsx
+│  │  ├─ AddProject.tsx
+│  │  ├─ Browse.tsx
+│  │  ├─ ChangePassword.tsx
+│  │  ├─ EditProject.tsx
+│  │  ├─ Favorite.tsx
+│  │  ├─ ForgotPassword.tsx
+│  │  ├─ Guest.tsx
+│  │  ├─ GuestRegister.tsx
+│  │  ├─ History.tsx
+│  │  ├─ Home.tsx
+│  │  ├─ Login.tsx
+│  │  ├─ Overview.tsx
+│  │  ├─ PendingApproval.tsx
+│  │  ├─ Project.tsx
+│  │  ├─ Student.tsx
+│  │  └─ TULogin.tsx
+│  │
+│  ├─ route/
+│  │  ├─ AppRoutes.tsx
+│  │  └─ ProtectedRoute.tsx
+│  │
+│  ├─ App.css
+│  ├─ App.tsx
+│  ├─ index.css
+│  ├─ main.tsx
+│  └─ vite-env.d.ts
+│
+├─ eslint.config.js
+├─ index.html
+├─ package.json
+├─ package-lock.json
+├─ README.md
+├─ tailwind.config.js
+├─ tsconfig.json
+├─ tsconfig.app.json
+├─ tsconfig.node.json
+└─ vite.config.ts
+
+
 ├─ backend/
 │  ├─ .mvn/                          # Maven wrapper
 │  ├─ src/
@@ -83,6 +177,59 @@ Manual / Instructions for your projects starts here !
 ├─ mvnw
 ├─ mvnw.cmd
 └─ pom.xml
+```
+
+---
+
+# 🔧 Prerequisites
+
+## 📌 Software ที่ต้องติดตั้งก่อน
+
+#### 1. Git
+
+ใช้สำหรับ clone repository
+
+```bash
+git --version
+```
+
+#### 2. Frontend
+
+* Node.js **LTS (แนะนำ 20.x หรือ 22.x)**
+* npm (มากับ Node.js)
+
+ตรวจสอบเวอร์ชัน:
+
+```bash
+node -v
+npm -v
+```
+
+#### 3. Backend
+
+* Java **JDK 25**
+
+ตรวจสอบเวอร์ชัน:
+
+```bash
+java -version
+javac -version
+```
+
+#### 4. Database
+
+* **MySQL Server 8.x**
+* **MySQL Workbench** (ใช้สำหรับจัดการฐานข้อมูล)
+
+---
+
+#### 4. Visual Studio Code**
+**Extension ที่ควรมี
+Spring boot extension pack
+Extension Pack for Java
+
+
+---
 
 # Topic 2 
 # Topic 3
