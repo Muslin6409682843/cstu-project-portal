@@ -15,6 +15,7 @@
    
 Manual / Instructions for your projects starts here !
 # Directory tree
+```text
 frontend/
 ├─ public/
 │
@@ -171,7 +172,7 @@ frontend/
 │  │     └─ java/th/ac/tu/cs/projectportal/
 │  │  │  │  └─ BackendApplicationTests.java
 │  │
-│  └─ target/                       # Build output
+│  └─ target/                      
 │
 ├─ .gitattributes
 ├─ mvnw
@@ -179,17 +180,14 @@ frontend/
 └─ pom.xml
 ```
 
----
-
 # 🔧 Prerequisites
-
 ## 📌 Software ที่ต้องติดตั้งก่อน
 
 #### 1. Git
 
 ใช้สำหรับ clone repository
-
-```bash
+---
+bash
 git --version
 ```
 
@@ -223,11 +221,115 @@ javac -version
 
 ---
 
-#### 4. Visual Studio Code**
+#### 5. Visual Studio Code**
 **Extension ที่ควรมี
-Spring boot extension pack
-Extension Pack for Java
+* **Spring boot extension pack
+* **Extension Pack for Java
 
+
+---
+
+# 🚀 Getting Started
+
+### 1️⃣ Clone Repository
+
+```bash
+git clone <repository-url>
+cd <project-root>
+```
+
+---
+
+## 🖥️ Frontend Setup (React + Vite)
+
+### 📂 เข้าโฟลเดอร์ frontend
+
+```bash
+cd frontend
+```
+
+### 📦 ติดตั้ง dependencies
+
+```bash
+npm install
+```
+
+> คำสั่งนี้จะติดตั้ง React, Vite, TypeScript, Tailwind, MUI, Axios และ library อื่น ๆ ให้อัตโนมัติ
+
+### ▶️ รัน Frontend (Development Mode)
+
+```bash
+npm run dev
+```
+
+เปิดเบราว์เซอร์ที่:
+
+```
+http://localhost:5173
+```
+
+---
+
+## ⚙️ Backend Setup (Spring Boot)
+
+### 📂 เข้าโฟลเดอร์ backend
+
+```bash
+cd backend
+```
+
+### ▶️ รัน Backend
+
+#### Windows
+
+```powershell
+.\mvnw.cmd spring-boot:run
+```
+
+#### macOS / Linux
+
+```bash
+./mvnw spring-boot:run
+```
+
+> โปรเจกต์นี้ใช้ **Maven Wrapper** จึงไม่จำเป็นต้องติดตั้ง Maven เอง
+
+Backend จะรันที่:
+
+```
+http://localhost:8081
+```
+
+---
+
+### 🛢️ Database Configuration
+
+โปรเจกต์นี้ใช้ **MySQL Server** และจัดการฐานข้อมูลผ่าน **MySQL Workbench**
+
+#### ขั้นตอนเตรียมฐานข้อมูล
+
+1. เปิด MySQL Workbench และเชื่อมต่อ MySQL Server
+2. สร้าง database ใหม่ (เช่น `finalproject`)
+3. ตรวจสอบว่า MySQL Server ทำงานที่ port `3306`
+
+#### ตั้งค่าใน Backend
+
+สร้างไฟล์ `backend/src/main/resources/application-dev.properties`
+
+ตัวอย่าง:
+
+```properties
+
+# Database configuration
+db.host=localhost
+db.port=3306
+db.name=finalproject
+
+spring.datasource.username=root
+spring.datasource.password=root
+
+# Backend server port
+server.port=8081
 
 ---
 
