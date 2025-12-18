@@ -232,7 +232,7 @@ javac -version
 
 # 🚀 Getting Started
 
-### 1️⃣ Clone Repository
+### Clone Repository
 
 ```bash
 git clone <repository-url>
@@ -273,12 +273,34 @@ http://localhost:5173
 
 ---
 
+
+
 ## ⚙️ Backend Setup (Spring Boot)
 
 ### 📂 เข้าโฟลเดอร์ backend
 
 ```bash
 cd backend
+```
+
+### ตั้งค่าใน Backend
+
+สร้างไฟล์ `backend/src/main/resources/application-dev.properties`
+
+ตัวอย่าง:
+
+```properties
+
+# Database configuration
+db.host=localhost
+db.port=3306
+db.name=finalproject
+
+spring.datasource.username=root
+spring.datasource.password=root
+
+# Backend server port
+server.port=8081
 ```
 
 ### ▶️ รัน Backend
@@ -298,7 +320,7 @@ cd backend
 
 สามารถรันได้ 2 วิธี:
 
-##### วิธีที่ 1: ผ่าน Spring Boot Dashboard
+วิธีที่ 1: ผ่าน Spring Boot Dashboard
 
 เปิดแท็บ Spring Boot Dashboard
 
@@ -306,7 +328,7 @@ cd backend
 
 กด ▶️ Run
 
-##### วิธีที่ 2: ผ่านไฟล์หลัก
+วิธีที่ 2: ผ่านไฟล์หลัก
 
 เปิดไฟล์ 
 
@@ -334,23 +356,6 @@ http://localhost:8081
 2. สร้าง database ใหม่ (เช่น `finalproject`)
 3. ตรวจสอบว่า MySQL Server ทำงานที่ port `3306`
 
-#### ตั้งค่าใน Backend
-
-สร้างไฟล์ `backend/src/main/resources/application-dev.properties`
-
-ตัวอย่าง:
-
-```properties
-
-# Database configuration
-db.host=localhost
-db.port=3306
-db.name=finalproject
-
-spring.datasource.username=root
-spring.datasource.password=root
-
-# Backend server port
-server.port=8081
-```
 ---
+
+
