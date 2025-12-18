@@ -1,0 +1,16 @@
+Thesis Title 	WEB APPLICATION FOR SEARCHING ABD DISPLAYING SPECIAL PROJECTS OF THE COMPUTER SCIENCE DEPARTMENT AT THAMMASAT UNICERSITY
+Author Title 				Miss Muslin Patwanich
+Author Title 				Mr. Santipap Pipatrattanachai
+Degree 				Bachelor of Science
+Major Field/Faculty/University	Computer Science
+Faculty of Science and Technology
+Thammasat University
+Project Advisor 			Asst. Prof. Dr. Thapana Boonchoo
+Academic Years 			2025
+
+ABSTRACT
+	At the tertiary education level, many students are required to complete a senior project as a graduation requirement. One crucial process in project development is information retrieval for research and reference purposes. Senior projects completed by previous students in the same field often share similar topics, content, and levels of complexity, making them valuable sources for study and further development.
+	However, access to previous projects is often hindered by the lack of a systematic storage and retrieval system, leading to difficulties in searching and utilizing these resources. This project aims to design and develop a web application for searching and displaying senior projects in the Computer Science program, Faculty of Science and Technology, Thammasat University. The system includes features that enhance accessibility and usability, such as quick and advanced search functions, the ability to "like" and save favorite projects, and the display and downloading of supporting documents such as project reports, presentation slides, and source code.
+	This system not only facilitates students in accessing senior projects more conveniently but also promotes knowledge continuity, showcases students' capabilities and departmental achievements, prevents the loss of valuable works, and systematically organizes project storage for long-term benefits.
+
+Keywords: Senior Project, Information Retrieval System, Data Storage
