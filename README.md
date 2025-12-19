@@ -305,7 +305,7 @@ cd backend
 
 ### ตั้งค่าใน Backend
 
-ตรวจสอบและแก้ไขค่าการเชื่อมต่อฐานข้อมูลในไฟล์  
+ให้สร้างไฟล์ตั้งค่า:
 `backend/src/main/resources/application-dev.properties`
 
 ตัวอย่างการตั้งค่า:
