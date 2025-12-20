@@ -38,6 +38,81 @@
 โครงสร้างไดเรกทอรีของโปรเจกต์ แบ่งออกเป็นส่วน Frontend และ Backend ดังนี้
 
 ```text
+backend/
+├─ .mvn/                          # Maven wrapper
+├─ src/
+│  ├─ main/
+│  │  ├─ java/th/ac/tu/cs/projectportal/
+│  │  │   ├─ config/
+│  │  │   │  ├─ AdminSeeder.java
+│  │  │   │  ├─ CorsConfig.java
+│  │  │   │  ├─ ProjectConfig.java
+│  │  │   │  └─ SecurityConfig.java
+│  │  │   │
+│  │  │   ├─ controller/
+│  │  │   │  ├─ AdminController.java
+│  │  │   │  ├─ BookmarkController.java
+│  │  │   │  ├─ DownloadHistoryController.java
+│  │  │   │  ├─ HistoryController.java
+│  │  │   │  ├─ ProjectController.java
+│  │  │   │  ├─ PublicDownloadHistoryController.java
+│  │  │   │  ├─ PublicProjectController.java
+│  │  │   │  └─ UserController.java
+│  │  │   │
+│  │  │   ├─ dto/
+│  │  │   │  ├─ ProjectDTO.java
+│  │  │   │  └─ UserResponseDTO.java
+│  │  │   │
+│  │  │   ├─ entity/
+│  │  │   │  ├─ Bookmark.java
+│  │  │   │  ├─ BookmarkId.java
+│  │  │   │  ├─ DownloadHistory.java
+│  │  │   │  ├─ DownloadHistoryId.java
+│  │  │   │  ├─ Gender.java
+│  │  │   │  ├─ History.java
+│  │  │   │  ├─ HistoryId.java
+│  │  │   │  ├─ Project.java
+│  │  │   │  ├─ Role.java
+│  │  │   │  └─ User.java
+│  │  │   │
+│  │  │   ├─ repository/
+│  │  │   │  ├─ BookmarkRepository.java
+│  │  │   │  ├─ DownloadHistoryRepository.java
+│  │  │   │  ├─ HistoryRepository.java
+│  │  │   │  ├─ ProjectRepository.java
+│  │  │   │  └─ UserRepository.java
+│  │  │   │
+│  │  │   ├─ service/
+│  │  │   │  ├─ DownloadHistoryService.java
+│  │  │   │  ├─ ProjectService.java
+│  │  │   │  ├─ UserCleanupService.java
+│  │  │   │  └─ UserService.java
+│  │  │   │
+│  │  │   └─ BackendApplication.java
+│  │  │
+│  │  └─ resources/
+│  │     ├─ sql/
+│  │     │  └─ schema.sql
+│  │     ├─ application.properties
+│  │     └─ application-dev.properties
+│  │
+│  └─ test/
+│     └─ java/th/ac/tu/cs/projectportal/
+│        └─ BackendApplicationTests.java
+│
+├─ .gitattributes
+├─ mvnw
+├─ mvnw.cmd
+└─ pom.xml
+
+demo/
+└── README.md       # คำอธิบายและลิงก์วิดีโอ Demo
+
+final_reports/
+├── 68-1_CS403_67-2_01_tpb-r2_abstract_en.txt  # Abstract (English)
+├── 68-1_CS403_67-2_01_tpb-r2_abstract_th.txt  # Abstract (Thai)
+└── 68-1_CS403_67-2_01_tpb-r2.pdf              # Final Report
+
 frontend/
 ├─ public/
 │
@@ -131,75 +206,10 @@ frontend/
 ├─ tsconfig.node.json
 └─ vite.config.ts
 
+.gitignore
 
-├─ backend/
-│  ├─ .mvn/                          # Maven wrapper
-│  ├─ src/
-|  │  ├─ main/
-|  │  │  ├─ java/th/ac/tu/cs/projectportal/
-|  │  │  │   ├─ config/
-│  │  │  │   │  ├─ AdminSeeder.java
-│  │  │  │   │  ├─ CorsConfig.java
-│  │  │  │   │  ├─ ProjectConfig.java
-│  │  │  │   │  └─ SecurityConfig.java
-│  │  │  │   │
-│  │  │  │   ├─ controller/
-│  │  │  │   │  ├─ AdminController.java
-│  │  │  │   │  ├─ BookmarkController.java
-│  │  │  │   │  ├─ DownloadHistoryController.java
-│  │  │  │   │  ├─ HistoryController.java
-│  │  │  │   │  ├─ ProjectController.java
-│  │  │  │   │  ├─ PublicDownloadHistoryController.java
-│  │  │  │   │  ├─ PublicProjectController.java
-│  │  │  │   │  └─ UserController.java
-│  │  │  │   │
-│  │  │  │   ├─ dto/
-│  │  │  │   │  ├─ ProjectDTO.java
-│  │  │  │   │  └─ UserResponseDTO.java
-│  │  │  │   │
-│  │  │  │   ├─ entity/
-│  │  │  │   │  ├─ Bookmark.java
-│  │  │  │   │  ├─ BookmarkId.java
-│  │  │  │   │  ├─ DownloadHistory.java
-│  │  │  │   │  ├─ DownloadHistoryId.java
-│  │  │  │   │  ├─ Gender.java
-│  │  │  │   │  ├─ History.java
-│  │  │  │   │  ├─ HistoryId.java
-│  │  │  │   │  ├─ Project.java
-│  │  │  │   │  ├─ Role.java
-│  │  │  │   │  └─ User.java
-│  │  │  │   │
-│  │  │  │   ├─ repository/
-│  │  │  │   │  ├─ BookmarkRepository.java
-│  │  │  │   │  ├─ DownloadHistoryRepository.java
-│  │  │  │   │  ├─ HistoryRepository.java
-│  │  │  │   │  ├─ ProjectRepository.java
-│  │  │  │   │  └─ UserRepository.java
-│  │  │  │   │
-│  │  │  │   ├─ service/
-│  │  │  │   │  ├─ DownloadHistoryService.java
-│  │  │  │   │  ├─ ProjectService.java
-│  │  │  │   │  ├─ UserCleanupService.java
-│  │  │  │   │  └─ UserService.java
-│  │  │  │   │
-│  │  │  │   └─ BackendApplication.java
-│  │  │  │
-│  │  │  └─ resources/
-│  │  │     ├─ sql/
-│  │  │     │  └─ schema.sql
-│  │  │     ├─ application.properties
-│  │  │     └─ application-dev.properties
-│  │  │
-│  │  └─ test/
-│  │     └─ java/th/ac/tu/cs/projectportal/
-│  │  │  │  └─ BackendApplicationTests.java
-│  │
-│  └─ target/                      
-│
-├─ .gitattributes
-├─ mvnw
-├─ mvnw.cmd
-└─ pom.xml
+README.md                  # ไฟล์อธิบายโปรเจกต์และวิธีติดตั้ง
+
 ```
 
 # 🔧 Prerequisites
@@ -325,10 +335,15 @@ server.port=8081
 
 ### ▶️ รัน Backend
 
-#### Windows
+#### Windows (PowerShell)
 
 ```powershell
 .\mvnw.cmd spring-boot:run
+```
+#### Windows (Command Prompt)
+
+```cmd
+mvnw spring-boot:run
 ```
 
 #### รัน Spring Boot Application
