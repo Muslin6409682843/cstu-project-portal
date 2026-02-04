@@ -26,7 +26,9 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of("http://localhost:5173")); // frontend origin
+        configuration.setAllowedOrigins(List.of(
+                "http://localhost:5173",
+                "https://your-react-app.vercel.app"));
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(List.of("*"));
         configuration.setAllowCredentials(true); // ✅ อนุญาตให้ส่ง cookie/session ได้
@@ -46,7 +48,7 @@ public class SecurityConfig {
                                 "/api/check-session",
                                 "/api/test-cleanup-expired-guest", "/api/test-cleanup-expired-pending",
                                 "/upload/**",
-                                "/api/download-history/**" )
+                                "/api/download-history/**")
                         .permitAll()
                         .requestMatchers("/api/projects/**").permitAll()
                         .requestMatchers("/api/admin/**").hasRole("Admin")
